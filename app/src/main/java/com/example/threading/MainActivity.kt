@@ -24,6 +24,15 @@ class MainActivity : AppCompatActivity() {
   private fun initView() {
     with(mBinding) {
       Glide.with(this@MainActivity).asGif().load(R.raw.spiderman).into(ivPerformer)
+
+      /*-- place button click listener below --*/
+      btNormal.setOnClickListener {
+        val input = etInput.text?.toString()?.toInt() ?: 1
+        val result = calculateFactorialInMainThread(input)
+        tvResult.text = "$result"
+      }
+
+      /*-- end of button click listener --*/
     }
   }
 
