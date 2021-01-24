@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
       btNormal.setOnClickListener {
         val input = etInput.text?.toString()?.toInt() ?: 1
         val result = calculateFactorialInMainThread(input)
-        tvResult.text = "$result"
+        setFactorialResult(result)
       }
 
       /*-- end of button click listener --*/
@@ -42,5 +42,9 @@ class MainActivity : AppCompatActivity() {
       factorial = factorial.multiply(BigInteger.valueOf(i.toLong()))
     }
     return factorial
+  }
+
+  private fun setFactorialResult(number: BigInteger) {
+    mBinding.tvResult.text = "$number".substring(0,9)
   }
 }
