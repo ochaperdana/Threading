@@ -81,4 +81,22 @@
         android:text="Calculate on Main Thread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/b_button" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Calculate with New Thread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_normal" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Loading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_new" />
 </androidx.constraintlayout.widget.ConstraintLayout>
